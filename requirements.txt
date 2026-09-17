@@ -1,0 +1,14 @@
+# Core algorithmic modules (aggregation, currency/group partitioning, greedy
+# and optimal settlement, ledger) use only the Python standard library
+# (heapq, collections, dataclasses) and need nothing from this file.
+
+streamlit>=1.38     # web UI (app.py)
+pandas>=2.0          # dataframes for the UI tables, plus loading Kaggle datasets later
+
+# For the next phase: dataset loading, live exchange-rate lookups, and
+# evaluation plotting (Sections 4.6-4.9 of the report). Not required to run app.py.
+matplotlib>=3.7      # plotting benchmark results (Table 4.3 metrics)
+requests>=2.31       # calling the Frankfurter exchange-rate API
+
+# Optional, for a nicer test runner than `python3 tests/test_pipeline.py`
+pytest>=7.4
